@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rounder/views/auth/biometric_view.dart';
+import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 
 void main() async {
@@ -15,11 +17,24 @@ class _RounderApplicationState extends State<RounderApplication> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Example"),
+        body: ConstrainedBox(
+          constraints: const BoxConstraints.expand(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                RaisedButton(
+                  child: Text("Click"),
+                  onPressed: () {
+
+
+                  },
+                )
+              ],
+          ),
         ),
-        body: Container(),
-      ),
+      )
     );
   }
+
+
 }

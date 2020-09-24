@@ -2,3 +2,5 @@
 https://www.youtube.com/watch?v=6R5VEgUKiX8
 
 애니메이션 https://flutterawesome.com/enables-you-to-create-stunning-flutter-animations/
+
+dir 구조 https://medium.com/flutter-community/file-and-folder-structure-in-flutter-967b8be3155e
