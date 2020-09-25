@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rounder/views/auth/biometric_view.dart';
-import 'package:flutter/services.dart';
-import 'package:local_auth/local_auth.dart';
+import 'package:rounder/views/auth/authenticator.dart';
+
 
 void main() async {
   runApp(RounderApplication());
@@ -24,9 +23,9 @@ class _RounderApplicationState extends State<RounderApplication> {
               children: [
                 RaisedButton(
                   child: Text("Click"),
-                  onPressed: () {
-
-
+                  onPressed: () async {
+                    LocalAuthenticator authenticator = LocalAuthenticator.getInstance();
+                    print(await authenticator.authenticate());
                   },
                 )
               ],

@@ -34,6 +34,7 @@ class _BiometricViewState extends State<BiometricView> {
     } on PlatformException catch(e) {
       print(e);
     }
+
     if(!mounted) return;
     setState(() {
       _availableBiometrics = availableBiometrics;
