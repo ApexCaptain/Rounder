@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 
@@ -24,12 +25,12 @@ class LocalAuthenticator {
     return isAvailable;
   }
 
-  Future<bool> authenticate() async {
+  Future<bool> authenticate(BuildContext context) async {
     bool isAuthenticated = false;
     _isAuthenticating = true;
     try {
       isAuthenticated = await _auth.authenticateWithBiometrics(
-        localizedReason: "생체",
+        localizedReason: "",//Translator.of(context).trans("localizedReason"),
         useErrorDialogs: true,
         stickyAuth: true,
       );
